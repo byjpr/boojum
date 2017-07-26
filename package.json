@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/byjord/boojum/issues"
   },
-  "homepage": "https://github.com/byjord/boojum#readme"
+  "homepage": "https://github.com/byjord/boojum#readme",
+  "dependencies": {
+    "Faker": "^0.7.2"
+  }
 }
