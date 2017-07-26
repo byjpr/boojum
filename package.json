@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/byjord/boojum#readme",
   "dependencies": {
-    "Faker": "^0.7.2"
+    "Faker": "^0.7.2",
+    "liquid-node": "^2.6.1"
   }
 }
