@@ -4,7 +4,7 @@
   "description": "An easy way to build Shopify Themes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/index.js",
+    "test": "mocha tests/index.js --compilers js:babel-core/register",
     "coverage": "istanbul cover --print both _mocha -- test/index.js"
   },
   "repository": {
