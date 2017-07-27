@@ -1,3 +1,6 @@
+![Boojum Logo](http://i.imgur.com/ASdSuyl.png "Boojum Header")
+
+
 # Boojum
 
 Boojum allows your to run your Shopify themes on your computer, without a persistent connection to the internet. Use awesome things like Live Reloading.
