@@ -5,11 +5,11 @@
 
 Boojum allows your to run your Shopify themes on your computer, without a persistent connection to the internet. Use awesome things like Live Reloading.
 
-### Install
+### Install Dev
 
 Clone the repo
 ```terminal
-git clone https://github.com/byjord/boojum.git
+git clone https://github.com/byjord/boojum.git && cd boojum
 ```
 
 Install dependencies
