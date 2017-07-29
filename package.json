@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "An easy way to build Shopify Themes",
   "main": "index.js",
+  "bin": {
+    "boojum": "lib/cli/entry.js"
+  },
   "scripts": {
     "start": "babel-node app.js",
     "test": "mocha tests/index.js --compilers js:babel-core/register",
@@ -21,7 +24,10 @@
   "dependencies": {
     "Faker": "^0.7.2",
     "bluebird": "^3.5.0",
+    "hexo-log": "^0.1.3",
     "liquid-node": "^2.6.1",
+    "meow": "^3.7.0",
+    "update-notifier": "^2.2.0",
     "warehouse": "^2.2.0"
   },
   "devDependencies": {
