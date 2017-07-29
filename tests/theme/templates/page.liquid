@@ -1,0 +1,32 @@
+<div class="section">
+
+  <div class="page-heading">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.metafields.heading.subtitle }}</p>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="width-restrict pad-bottom">
+    <div class="rte">
+
+      {% if page.metafields.images.main %}
+        <div class="col-right">
+          <img src="{{ page.metafields.images.main }}" />
+        </div>
+
+        <div class="col-left">
+          {{ page.content }}
+        </div>
+
+      {% else %}
+        <div class="col-full">
+          {{ page.content }}
+        </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+</div>

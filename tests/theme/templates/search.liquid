@@ -1,0 +1,39 @@
+
+<div id="searchresults">
+  <div class="width-restrict pad centered">
+
+    <form action="/search" method="get" class="search-form" role="search">
+      <input name="q" type="search" id="search-field" placeholder="Search store..." value="{{ search.terms | escape }}" /><br />
+      <input type="submit" class="btn red" id="search-submit" value="Search" />
+    </form>
+
+    {% if search.performed %}
+      {% paginate search.results by 10 %}
+      {% if search.results_count == 0 %}
+        <p>Your search for "{{ search.terms }}" did not yield any results.</p>
+      {% else %}
+      <div class="results">
+        {% for item in search.results %}
+        <div class="result">
+          <h3>{{ item.title | link_to: item.url }}</h3>
+          {% if item.vendor %}
+          <div class="result-image">
+            <a href="{{ item.url }}" title="{{ item.title | escape }}">
+              {{ item | img_url: 'small' | img_tag: item.featured_image.alt }}
+            </a>
+          </div>
+          {% endif %}
+          <span>{{ item.content | strip_html | truncatewords: 40 | highlight: search.terms }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if paginate.pages > 1 %}
+      <div id="pagination">
+        {{ paginate | default_pagination }}
+      </div>
+      {% endif %}
+      {% endpaginate %}
+    {% endif %}
+  </div>
+</div>
