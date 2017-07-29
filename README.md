@@ -3,7 +3,7 @@
 
 # Boojum
 
-Boojum allows your to run your Shopify themes on your computer, without a persistent connection to the internet. Use awesome things like Live Reloading.
+Liquid has escaped it's container. Boojum allows you to run Shopify themes locally, or on a CI service. No persistent internet connection required. Do awesome things.
 
 ### Install Dev
 
