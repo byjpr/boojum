@@ -9,7 +9,7 @@
   "scripts": {
     "start": "babel-node app.js",
     "test": "mocha tests/index.js --compilers js:babel-core/register",
-    "coverage": "istanbul cover --print both _mocha -- test/index.js"
+    "coverage": "istanbul cover --print both _mocha -- tests/index.js"
   },
   "repository": {
     "type": "git",
