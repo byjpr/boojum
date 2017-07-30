@@ -26,6 +26,7 @@
     "bluebird": "^3.5.0",
     "hexo-log": "^0.1.3",
     "liquid-node": "^2.6.1",
+    "minimist": "^1.2.0",
     "update-notifier": "^2.2.0",
     "warehouse": "^2.2.0"
   },
