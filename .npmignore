@@ -11,3 +11,6 @@ appveyor.yml
 .eslintrc
 .eslintignore
 .DS_Store
+
+
+tests/theme/*
