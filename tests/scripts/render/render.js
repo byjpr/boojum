@@ -4,10 +4,9 @@ import App from "../../../lib/app.js";
 
 var hexo = new App();
 
-describe('Render', () => {
+describe('Test Render Engine', () => {
 
-
-  it('render() - options', () => hexo.render.render({
+  it('Renders swig from text input', () => hexo.render.render({
     text: [
       '<title>{{ title }}</title>',
       '<body>{{ content }}</body>'
@@ -23,5 +22,20 @@ describe('Render', () => {
     ].join('\n'))
   }));
 
+  it('Renders liquid from text input', () => hexo.render.render({
+    text: [
+      '<title>{{ title }}</title>',
+      '<body>{{ content }}</body>'
+    ].join('\n'),
+    engine: 'liquid'
+  }, {
+    title: 'Hello world',
+    content: 'foobar'
+  }).then(result => {
+    expect(result).to.eql([
+      '<title>Hello world</title>',
+      '<body>foobar</body>'
+    ].join('\n'))
+  }));
 
 });
