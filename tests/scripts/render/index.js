@@ -1,0 +1,3 @@
+describe('Render', () => {
+  require('./render');
+});
