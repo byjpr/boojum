@@ -7,5 +7,6 @@ describe('Global Checks', () => {
 });
 
 describe('Boojum', () => {
+  require('./scripts/models');
   require('./scripts/render');
 });
