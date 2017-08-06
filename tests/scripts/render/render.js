@@ -32,6 +32,7 @@ describe('Test Render Engine', () => {
     title: 'Hello world',
     content: 'foobar'
   }).then(result => {
+
     expect(result).to.eql([
       '<title>Hello world</title>',
       '<body>foobar</body>'
