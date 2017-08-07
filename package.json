@@ -33,7 +33,6 @@
     "swig-extras": "0.0.1",
     "update-notifier": "^2.2.0",
     "warehouse": "^2.2.0",
-    "watchr": "^3.0.1",
     "yargs": "^8.0.2"
   },
   "devDependencies": {
