@@ -54,7 +54,7 @@
     "babel-preset-stage-0": "6.16.0",
     "chai": "^4.1.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^4.4.1",
+    "eslint": "^3.19.0",
     "eslint-plugin-shopify": "^16.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2"
