@@ -25,6 +25,7 @@
   "homepage": "https://github.com/byjord/boojum#readme",
   "dependencies": {
     "Faker": "^0.7.2",
+    "abbrev": "^1.1.0",
     "bluebird": "^3.5.0",
     "chalk": "^2.1.0",
     "hexo-fs": "^0.2.1",
