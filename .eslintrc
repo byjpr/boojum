@@ -1,7 +1,11 @@
 {
   "extends": [
     "plugin:shopify/esnext",
+    "eslint:recommended",
     "plugin:shopify/node",
-    "eslint:recommended"
-  ]
+  ],
+  "rules": {
+     "no-console": "off",
+     "node/shebang": "off",
+  }
 }
