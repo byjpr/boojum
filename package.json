@@ -9,8 +9,8 @@
   "scripts": {
     "start": "babel-node app.js",
     "test": "mocha tests/index.js --compilers js:babel-core/register",
-    "test:eslint": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules",
-    "eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --fix",
+    "test:eslint": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
+    "eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix",
     "coverage": "istanbul cover --print both _mocha -- tests/index.js"
   },
   "repository": {
