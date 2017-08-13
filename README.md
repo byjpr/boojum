@@ -1,5 +1,6 @@
 ![Boojum Logo](http://i.imgur.com/ASdSuyl.png "Boojum Header")
 
+[![Known Vulnerabilities](https://snyk.io/test/github/byjord/boojum/badge.svg)](https://snyk.io/test/github/byjord/boojum)
 
 # Boojum
 
