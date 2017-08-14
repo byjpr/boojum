@@ -2,6 +2,8 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/byjord/boojum/badge.svg)](https://snyk.io/test/github/byjord/boojum)
 
+[![Coverage Status](https://coveralls.io/repos/github/byjord/boojum/badge.svg?branch=master)](https://coveralls.io/github/byjord/boojum?branch=master)
+
 # Boojum
 
 Liquid has escaped it's container. Boojum allows you to run Shopify themes locally, or on a CI service. No persistent internet connection required. Do awesome things.
