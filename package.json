@@ -7,10 +7,10 @@
     "boojum": "lib/cli/entry.js"
   },
   "scripts": {
-    "start": "babel-node app.js",
-    "test": "snyk test && mocha tests/index.js --compilers js:babel-core/register",
-    "test:eslint": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
-    "eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix",
+    "start": "cross-env NODE_ENV=development babel-node app.js",
+    "test": "snyk test && cross-env NODE_ENV=test mocha tests/index.js --compilers js:babel-core/register",
+    "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
+    "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha tests/index.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
