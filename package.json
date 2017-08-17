@@ -1,6 +1,6 @@
 {
   "name": "boojum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An easy way to build Shopify Themes",
   "main": "index.js",
   "bin": {
