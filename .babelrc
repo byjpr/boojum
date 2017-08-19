@@ -12,7 +12,7 @@
       { "src": "./lib/registers", "expose": "registers" },
       { "src": "./lib/theme", "expose": "theme" },
       { "src": "./lib/utils", "expose": "utils" },
-      { "src": "./lib/app.js", "expose": "app.js" },
+      { "src": "./lib/app.js", "expose": "app" },
       { "src": "./package.json", "expose": "package.json" }
     ]]
   ]
