@@ -1,5 +1,7 @@
 ![Boojum Logo](http://i.imgur.com/ASdSuyl.png "Boojum Header")
 
+[![Build Status](https://travis-ci.org/byjord/boojum.svg?branch=master)](https://travis-ci.org/byjord/boojum)
+
 [![Known Vulnerabilities](https://snyk.io/test/github/byjord/boojum/badge.svg)](https://snyk.io/test/github/byjord/boojum)
 
 [![Coverage Status](https://coveralls.io/repos/github/byjord/boojum/badge.svg?branch=master)](https://coveralls.io/github/byjord/boojum?branch=master)
