@@ -6,14 +6,8 @@
     }
   },
   "plugins": [
-    ["module-alias", [
-      { "src": "./lib/controllers", "expose": "controllers" },
-      { "src": "./lib/models", "expose": "models" },
-      { "src": "./lib/registers", "expose": "registers" },
-      { "src": "./lib/theme", "expose": "theme" },
-      { "src": "./lib/utils", "expose": "utils" },
-      { "src": "./lib/app.js", "expose": "app" },
-      { "src": "./package.json", "expose": "package.json" }
-    ]]
+    ["module-resolver", {
+      "root": ["./lib"],
+    }]
   ]
 }
