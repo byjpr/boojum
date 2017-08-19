@@ -8,6 +8,8 @@
 
 # Boojum
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/byjord/boojum.svg)](https://greenkeeper.io/)
+
 Liquid has escaped it's container. Boojum allows you to run Shopify themes locally, or on a CI service. No persistent internet connection required. Do awesome things.
 
 ### Install Dev
