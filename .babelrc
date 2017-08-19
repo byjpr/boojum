@@ -8,6 +8,10 @@
   "plugins": [
     ["module-resolver", {
       "root": ["./lib"],
+      "alias": {
+        "package.json": "./package.json",
+        "app": "./lib/app.js",
+      }
     }]
   ]
 }
