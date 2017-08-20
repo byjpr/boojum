@@ -1,5 +1,14 @@
 ---
 engines:
+  fixme:
+    enabled: true
+    config:
+      strings:
+        - TODO
+        - FIXME
+        - HACK
+        - BUG
+        - XXX
   duplication:
     enabled: true
     config:
