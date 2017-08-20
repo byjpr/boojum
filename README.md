@@ -4,13 +4,11 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/byjord/boojum/badge.svg)](https://snyk.io/test/github/byjord/boojum)
 
-[![Coverage Status](https://coveralls.io/repos/github/byjord/boojum/badge.svg?branch=master)](https://coveralls.io/github/byjord/boojum?branch=master)
+[![Test Coverage](https://codeclimate.com/github/byjord/boojum/badges/coverage.svg)](https://codeclimate.com/github/byjord/boojum/coverage)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/byjord/boojum.svg)](https://greenkeeper.io/)
 
 [![Code Climate](https://codeclimate.com/github/byjord/boojum/badges/gpa.svg)](https://codeclimate.com/github/byjord/boojum)
-
-[![Test Coverage](https://codeclimate.com/github/byjord/boojum/badges/coverage.svg)](https://codeclimate.com/github/byjord/boojum/coverage)
 
 [![Issue Count](https://codeclimate.com/github/byjord/boojum/badges/issue_count.svg)](https://codeclimate.com/github/byjord/boojum)
 
