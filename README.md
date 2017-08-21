@@ -10,6 +10,8 @@
 
 # Boojum
 
+***Currently Boojum is under development, so trying to use it is discouraged unless you're looking to play around with something novel. [Subscribe & Watch Boojum for updates](https://github.com/byjord/boojum/subscription)***
+
 Boojum lets you run Shopify themes locally or on a CI service _(Hopefully)_. No persistent internet connection required. Do awesome things.
 
 Why use Boojum when Shopify provides [awesome](https://help.shopify.com/themes/development/getting-started) [development](https://help.shopify.com/themes/development/getting-started/development-environment) [infrastructure](https://help.shopify.com/themes/development/getting-started/choosing-an-editor)? I like to build things when I'm on a train or airplane, so I needed something that would allow me to work and preview offline.
