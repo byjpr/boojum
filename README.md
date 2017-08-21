@@ -1,55 +1,51 @@
-![Boojum Logo](http://i.imgur.com/ASdSuyl.png "Boojum Header")
+<img src="http://i.imgur.com/5vo81dC.png" alt="Boojum logo" title="Boojum - Liquid, a superfluid" align="right" width="100px" />
 
-<div align="center">
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/byjord/boojum">
-    <img src="https://travis-ci.org/byjord/boojum.svg?branch=master" />
-  </a>
-
-  <!-- Snyk Known Vulnerabilities -->
-  <a href="https://snyk.io/test/github/byjord/boojum">
-    <img src="https://snyk.io/test/github/byjord/boojum/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/byjord/boojum" style="max-width:100%;">
-  </a>
-
-  <!-- Code Climate Test Coverage -->
-  <a href="https://codeclimate.com/github/byjord/boojum/coverage">
-    <img src="https://codeclimate.com/github/byjord/boojum/badges/coverage.svg" />
-  </a>
-
-  <!-- Greenkeeper -->
-  <a href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/byjord/boojum.svg" />
-  </a>
-
-  <!-- Code Climate GPA -->
-  <a href="https://codeclimate.com/github/byjord/boojum">
-    <img src="https://codeclimate.com/github/byjord/boojum/badges/gpa.svg" />
-  </a>
-
-  <!-- Code Climate Issue counts -->
-  <a href="https://codeclimate.com/github/byjord/boojum">
-    <img src="https://codeclimate.com/github/byjord/boojum/badges/issue_count.svg" />
-  </a>
-</div>
+[![Build Status](https://travis-ci.org/byjord/boojum.svg?branch=master)](https://travis-ci.org/byjord/boojum)
+[![Known Vulnerabilities](https://snyk.io/test/github/byjord/boojum/badge.svg)](https://snyk.io/test/github/byjord/boojum)
+[![Test Coverage](https://codeclimate.com/github/byjord/boojum/badges/coverage.svg)](https://codeclimate.com/github/byjord/boojum/coverage)
+[![Greenkeeper badge](https://badges.greenkeeper.io/byjord/boojum.svg)](https://greenkeeper.io/)
+[![Code Climate](https://codeclimate.com/github/byjord/boojum/badges/gpa.svg)](https://codeclimate.com/github/byjord/boojum)
+[![Issue Count](https://codeclimate.com/github/byjord/boojum/badges/issue_count.svg)](https://codeclimate.com/github/byjord/boojum)		
 
 
 # Boojum
 
-Liquid has escaped it's container. Boojum allows you to run Shopify themes locally, or on a CI service. No persistent internet connection required. Do awesome things.
+***Currently Boojum is under development, so trying to use it is discouraged unless you're looking to play around with something novel. [Subscribe & Watch Boojum for updates](https://github.com/byjord/boojum/subscription)***
 
-### Install Dev
+Boojum lets you run Shopify themes locally or on a CI service _(Hopefully)_. No persistent internet connection required. Do awesome things.
 
-Clone the repo
-```terminal
-git clone https://github.com/byjord/boojum.git && cd boojum
-```
+Why use Boojum when Shopify provides [awesome](https://help.shopify.com/themes/development/getting-started) [development](https://help.shopify.com/themes/development/getting-started/development-environment) [infrastructure](https://help.shopify.com/themes/development/getting-started/choosing-an-editor)? I like to build things when I'm on a train or airplane, so I needed something that would allow me to work and preview offline.
 
-Install dependencies
-```terminal
-npm install
-```
+---
 
-Worship the lord and saviour
-```terminal
-@elonmusk you da best
-```
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Development
+Quick start: `git clone https://github.com/byjord/boojum.git && cd boojum && npm i`
+
+1. Clone the repo
+    ```terminal
+    git clone https://github.com/byjord/boojum.git && cd boojum
+    ```
+
+2. Install dependencies
+    ```terminal
+    npm install
+    ```
+
+3. (Optional) Worship the lord and saviour
+    ```terminal
+    @elonmusk you da best
+    ```
+
+
+## License
+
+This project currently does not have a licence, but one will be selected soon.
+
+## Acknowledgments
+
+* [Hexo](https://github.com/hexojs/hexo/) - Boojum started as a fork of Hexo
