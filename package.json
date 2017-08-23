@@ -15,6 +15,21 @@
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
+  "nyc": {
+    "root": "./lib",
+    "reporter": ["text", "text-summary", "lcov", "html"],
+    "include": ["lib/**/*.js"],
+    "require": ["babel-core/register"],
+    "sourceMap": false,
+    "instrument": false,
+    "all": true,
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 70,
+    "statements": 70,
+    "functions": 70,
+    "branches": 70
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byjord/boojum.git"
