@@ -8,12 +8,27 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node app.js",
-    "test": "cross-env NODE_ENV=test mocha tests/index.js --compilers js:babel-core/register",
+    "test": "mocha --compilers js:babel-core/register --reporter=dot --timeout=1350 test/\\*\\*/\\*.js",
+    "test:coverage": "NODE_ENV=nyc nyc --reporter=text-summary --reporter=lcov npm run test",
     "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
     "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha tests/index.js",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
+  },
+  "nyc": {
+    "root": "./lib",
+    "reporter": ["text", "text-summary", "lcov", "html"],
+    "include": ["lib/**/*.js"],
+    "require": ["babel-core/register"],
+    "sourceMap": false,
+    "instrument": false,
+    "all": true,
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 70,
+    "statements": 70,
+    "functions": 70,
+    "branches": 70
   },
   "repository": {
     "type": "git",
@@ -34,14 +49,15 @@
     "hexo-log": "^0.2.0",
     "liquid-node": "^3.0.0",
     "lodash": "^4.17.4",
+    "lowdb": "^0.17.1",
     "mz": "^2.6.0",
     "nsfw": "^1.0.16",
+    "schema-object": "^4.0.11",
+    "snyk": "^1.38.1",
     "swig": "^1.4.2",
     "swig-extras": "0.0.1",
     "update-notifier": "^2.2.0",
-    "warehouse": "^2.2.0",
-    "yargs": "^8.0.2",
-    "snyk": "^1.38.1"
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
