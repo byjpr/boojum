@@ -8,12 +8,15 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node app.js",
-    "test": "mocha --compilers js:babel-core/register --reporter=dot --timeout=1350 test/\\*\\*/\\*.js",
+    "test": "nyc ava",
     "test:coverage": "NODE_ENV=nyc nyc --reporter=text-summary --reporter=lcov npm run test",
     "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
-    "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix"
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
   },
   "nyc": {
     "root": "./lib",
@@ -70,6 +73,7 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "ava": "^0.22.0",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
