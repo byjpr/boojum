@@ -4,7 +4,7 @@
   "description": "An easy way to build Shopify Themes",
   "main": "index.js",
   "bin": {
-    "boojum": "lib/cli/entry.js"
+    "boojum": "cli/entry.js"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node app.js",
