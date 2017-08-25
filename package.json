@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node app.js",
+    "build": "BABEL_ENV=production babel --out-dir=dist ./lib/app.js",
     "test": "nyc ava",
     "test:coverage": "NODE_ENV=nyc nyc --reporter=text-summary --reporter=lcov npm run test",
     "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
