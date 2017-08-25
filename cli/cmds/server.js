@@ -4,7 +4,7 @@ import {
   DELETED,
   MODIFIED,
   RENAMED,
-} from '../../controllers/stalker/constants';
+} from 'controllers/stalker/constants';
 
 module.exports = {
   command: 'server [dir]',
