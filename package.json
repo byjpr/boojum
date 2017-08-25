@@ -7,7 +7,7 @@
     "boojum": "cli/entry.js"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development babel-node app.js",
+    "start": "cross-env NODE_ENV=development babel-node ./lib/app.js",
     "build": "BABEL_ENV=production babel --out-dir=dist ./lib/app.js",
     "test": "nyc ava",
     "test:coverage": "NODE_ENV=nyc nyc --reporter=text-summary --reporter=lcov npm run test",
