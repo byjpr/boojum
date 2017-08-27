@@ -7,41 +7,80 @@
     "boojum": "cli/entry.js"
   },
   "scripts": {
+    "build": "babel lib --out-dir compiled --source-maps",
+    "build:test": "cross-env NODE_ENV=development nyc ava ./compiled",
+    "clean": "npm run clean:dev",
+    "clean:dev": "npm run clean:debug && npm run clean:coverage && npm run clean:db",
+    "clean:db": "rimraf db.json",
+    "clean:debug": "rimraf debug.log",
+    "clean:coverage": "rimraf coverage",
     "start": "cross-env NODE_ENV=development babel-node ./lib/app.js",
-    "build": "BABEL_ENV=production babel --out-dir=dist ./lib/app.js",
-    "test": "nyc ava",
-    "test:coverage": "NODE_ENV=nyc nyc --reporter=text-summary --reporter=lcov npm run test",
-    "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli",
+    "test": "cross-env NODE_ENV=development nyc ava",
+    "report": "nyc report --reporter=html",
+    "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern *.test.* --ignore-pattern node_modules --ignore-pattern cli",
     "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    },
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./lib"
+          ],
+          "alias": {
+            "package.json": "./package.json",
+            "app": "./lib/app.js"
+          }
+        }
+      ]
+    ]
+  },
+  "nyc": {
+    "include": [
+      "**/*.js"
+    ],
+    "require": [
+      "babel-core/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "check-coverage": true,
+    "per-file": true,
+    "all": true
   },
   "ava": {
     "require": [
       "babel-core/register"
-    ]
-  },
-  "nyc": {
-    "root": "./lib",
-    "reporter": [
-      "text",
-      "text-summary",
-      "lcov",
-      "html"
     ],
-    "include": [
-      "lib/**/*.js"
-    ],
-    "require": [
-      "babel-core/register"
-    ],
-    "sourceMap": false,
-    "instrument": false,
-    "all": true,
-    "check-coverage": true,
-    "per-file": true,
-    "lines": 70,
-    "statements": 70,
-    "functions": 70,
-    "branches": 70
+    "babel": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./lib"
+            ],
+            "alias": {
+              "package.json": "./package.json",
+              "app": "./lib/app.js"
+            }
+          }
+        ]
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -83,6 +122,7 @@
     "babel-plugin-istanbul": "^4.1.4",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-latest": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
@@ -93,7 +133,8 @@
     "eslint-plugin-shopify": "^17.0.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
     "istanbul": "^0.4.5",
-    "nyc": "^11.1.0"
+    "nyc": "^11.1.0",
+    "rimraf": "^2.6.1"
   },
   "snyk": true
 }
