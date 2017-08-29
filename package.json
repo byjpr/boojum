@@ -7,14 +7,14 @@
     "boojum": "cli/entry.js"
   },
   "scripts": {
-    "build": "babel lib --out-dir compiled --source-maps",
-    "build:test": "cross-env NODE_ENV=development nyc ava ./compiled",
     "clean": "npm run clean:dev",
-    "clean:dev": "npm run clean:debug && npm run clean:coverage && npm run clean:db",
+    "clean:dev": "npm run clean:debug && npm run clean:coverage && npm run clean:db && rimraf compiled",
     "clean:db": "rimraf db.json",
     "clean:debug": "rimraf debug.log",
     "clean:coverage": "rimraf coverage",
     "start": "cross-env NODE_ENV=development babel-node ./lib/app.js",
+    "build": "babel lib --out-dir compiled --source-maps",
+    "build:test": "cross-env NODE_ENV=development nyc ava ./compiled",
     "test": "cross-env NODE_ENV=development nyc ava",
     "report": "nyc report --reporter=html",
     "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern *.test.* --ignore-pattern node_modules --ignore-pattern cli",
@@ -66,6 +66,9 @@
       "babel-core/register"
     ],
     "babel": {
+      "presets": [
+        "es2015"
+      ],
       "plugins": [
         [
           "module-resolver",
@@ -124,15 +127,17 @@
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
     "eslint-import-resolver-babel-module": "^3.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-shopify": "^17.0.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
-    "istanbul": "^0.4.5",
+    "istanbul": "^1.1.0-alpha.1",
     "nyc": "^11.1.0",
     "rimraf": "^2.6.1"
   },
