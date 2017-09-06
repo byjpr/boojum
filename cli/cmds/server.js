@@ -18,9 +18,9 @@ module.exports = {
   handler: function(argv) {
     if (argv.dir == '.') { argv.dir = process.cwd(); }
 
-    const boojum = new App(argv.dir, {});
+    const boojum = new App(argv.dir, {}).load();
 
-    boojum.stalker.load(boojum.baseDir);
+    boojum.stalker.start(boojum.baseDir);
 
     boojum.stalker.on(CREATED, function(i) {
       console.log("CREATED event: ", i);
