@@ -1,13 +1,19 @@
 import App from 'app';
 
 module.exports = {
-  command: 'generate [dir] <command>',
-  aliases: ['g'],
+  command: 'setup [dir]',
+  aliases: ['s'],
   desc: 'Generate placeholder content',
-  builder: function(yargs) {
-    return yargs.commandDir('generate_cmds');
+  builder: {
+    dir: {
+      default: '.',
+    },
   },
   handler: function(argv) {
+    if (argv.dir == '.') { argv.dir = process.cwd(); }
 
+    const boojum = new App(argv.dir, {});
+
+    boojum.load().writeDefaultDB();
   }
 };
