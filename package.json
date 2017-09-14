@@ -12,6 +12,7 @@
     "clean:db": "rimraf db.json",
     "clean:debug": "rimraf debug.log",
     "clean:coverage": "rimraf coverage",
+    "clean:npm": "rimraf node_modules",
     "start": "cross-env NODE_ENV=development babel-node ./lib/app.js",
     "build": "babel lib --out-dir compiled --source-maps",
     "build:test": "cross-env NODE_ENV=development nyc ava ./compiled",
