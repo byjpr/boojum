@@ -1,15 +1,9 @@
 import App from 'app';
-import {
-  CREATED,
-  DELETED,
-  MODIFIED,
-  RENAMED,
-} from 'controllers/stalker/constants';
 
 module.exports = {
   command: 'server [dir]',
-  aliases: ['s'],
-  desc: 'Starts a rack server',
+  aliases: ['s', 'up', 'run'],
+  desc: 'Starts a Boojum server',
   builder: {
     dir: {
       default: '.',
@@ -18,26 +12,9 @@ module.exports = {
   handler: function(argv) {
     if (argv.dir == '.') { argv.dir = process.cwd(); }
 
-    const boojum = new App(argv.dir, {}).load();
+    const boojum = new App(argv.dir, {}).load().loadDB();
 
-    boojum.stalker.start(boojum.baseDir);
-
-    boojum.stalker.on(CREATED, function(i) {
-      console.log("CREATED event: ", i);
-    });
-
-    boojum.stalker.on(DELETED, function(i) {
-      console.log("DELETED event: ", i);
-    });
-
-    boojum.stalker.on(MODIFIED, function(i) {
-      console.log("MODIFIED event: ", i);
-    });
-
-    boojum.stalker.on(RENAMED, function(i) {
-      console.log("RENAMED event: ", i);
-    });
-
+    boojum.build();
 
   }
 };

@@ -1,9 +1,9 @@
 import App from 'app';
 
 module.exports = {
-  command: 'setup [dir]',
-  aliases: ['s'],
-  desc: 'Generate placeholder content',
+  command: 'generate [dir]',
+  aliases: ['g'],
+  desc: 'Generate markup',
   builder: {
     dir: {
       default: '.',
@@ -12,8 +12,9 @@ module.exports = {
   handler: function(argv) {
     if (argv.dir == '.') { argv.dir = process.cwd(); }
 
-    const boojum = new App(argv.dir, {});
+    const boojum = new App(argv.dir, {}).load().loadDB();
 
-    boojum.load().writeDefaultDB();
+    boojum.build();
+
   }
 };
