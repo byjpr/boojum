@@ -4,9 +4,10 @@
   "description": "An easy way to build Shopify Themes",
   "main": "index.js",
   "bin": {
-    "boojum": "cli/entry.js"
+    "boojum": "./cli/entry.js"
   },
   "scripts": {
+    "size": "size-limit",
     "clean": "npm run clean:dev",
     "clean:dev": "npm run clean:debug && npm run clean:coverage && npm run clean:db && rimraf compiled",
     "clean:db": "rimraf db.json",
@@ -21,6 +22,13 @@
     "test:eslint": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern *.test.* --ignore-pattern node_modules --ignore-pattern cli",
     "eslint:fix": "cross-env NODE_ENV=test eslint --ignore-path .gitignore --ignore-pattern tests --ignore-pattern node_modules --ignore-pattern lib/cli --fix"
   },
+  "size-limit": [
+     {
+       "limit": "10 KB",
+       "webpack": false,
+       "path": "lib/app.js"
+     }
+  ],
   "babel": {
     "presets": [
       "es2015"
@@ -140,7 +148,8 @@
     "eslint-plugin-sort-class-members": "^1.2.0",
     "istanbul": "^1.1.0-alpha.1",
     "nyc": "^11.1.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "size-limit": "^0.11.3"
   },
   "snyk": true
 }
