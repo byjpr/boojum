@@ -14,6 +14,6 @@ module.exports = {
 
     const boojum = new App(argv.dir, {});
 
-    boojum.load().loadDB().writeDefaultDB();
+    boojum.loadDB().writeDefaultDB();
   }
 };
