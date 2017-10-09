@@ -56,6 +56,10 @@
     ]
   },
   "nyc": {
+    "lines": 10,
+    "statements": 10,
+    "functions": 10,
+    "branches": 10,
     "include": [
       "**/*.js"
     ],
@@ -67,7 +71,7 @@
       "text-summary"
     ],
     "check-coverage": true,
-    "per-file": true,
+    "per-file": false,
     "all": true
   },
   "ava": {
