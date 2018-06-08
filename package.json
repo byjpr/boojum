@@ -85,7 +85,7 @@
     "eslint": "^4.5.0",
     "eslint-import-resolver-babel-module": "^3.0.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-shopify": "^17.0.0",
+    "eslint-plugin-shopify": "^22.1.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
